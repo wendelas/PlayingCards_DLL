@@ -56,7 +56,7 @@ namespace PlayingCards
         /// <returns>Class Card</returns>
         public Card DealCard()
         {
-            if (this.CardsLeft == 0) throw new Exception("You are trying to deal a card but there aren't any cards left in the deck");
+            if (this.CardsLeft == 0) throw new Exception("There aren't any cards left in the deck");
 
             int index = this.random.Next(this.CardsLeft);
             Card card = this.deck[index];

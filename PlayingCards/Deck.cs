@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PlayingCards
 {
+    /// <summary>
+    /// Provides methods and properties for creating and using a deck of cards.
+    /// </summary>
     public class Deck
     {
         private List<Card> deck;
@@ -30,7 +33,7 @@ namespace PlayingCards
         }
 
         /// <summary>
-        /// Creates deck with spesific count of cards starting from spesific rank.
+        /// Creates deck with spesific number of cards starting from spesific rank.
         /// </summary>
         /// <param name="lowestCard">The lowest rank in the deck.</param>
         /// <param name="highestCard">The highest rank in the deck.</param>
@@ -51,7 +54,7 @@ namespace PlayingCards
         }
 
         /// <summary>
-        /// Deal a random card from the deck.
+        /// Deals a random card from the deck.
         /// </summary>
         /// <returns>Class Card</returns>
         public Card DealCard()

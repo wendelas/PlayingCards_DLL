@@ -8,7 +8,7 @@ namespace PlayingCards
     /// <summary>
     /// Provides properties and methods for creating a playing card.
     /// </summary>
-    public class Card : IComparable<Card>, IEquatable<Card>
+    public class Card : IEquatable<Card>
     {
         /// <summary>
         /// Returns the rank of the card.
@@ -34,66 +34,14 @@ namespace PlayingCards
             else this.Suit = suit;
         }
 
-        //public Card(string card)
-        //{
-        //    int rank = 0;
-        //    int suit = 0;
-        //    char chRank = card[0], chSuit = card[1];
-
-        //    switch (chRank)
-        //    {
-        //        case 'T': rank = 10; break;
-        //        case 'J': rank = 11; break;
-        //        case 'Q': rank = 12; break;
-        //        case 'K': rank = 13; break;
-        //        case 'A': rank = GlobalVars.AceRank; break;
-
-        //        default: rank = Convert.ToInt32(chRank); break;
-        //    }
-
-        //    switch (chSuit)
-        //    {
-        //        case 'C': suit = 0; break;
-        //        case 'D': suit = 1; break;
-        //        case 'H': suit = 2; break;
-        //        case 'S': suit = 3; break;
-        //    }
-
-        //    if ((rank < GlobalVars.LowestCard) || (rank > GlobalVars.HighestCard))
-        //    {
-        //        throw new Exception("Rank value was incorect");
-        //    }
-        //    else this.Rank = rank;
-
-        //    if ((suit < 0) || (suit > 3))
-        //    {
-        //        throw new Exception("Suit value was incorect");
-        //    }
-        //    else this.Suit = suit;
-        //}
-
         /// <summary>
         /// Returns a value indicating whether this instance is equal.
         /// </summary>
-        /// <param name="other">Card Class</param>
+        /// <param name="other">Class Card</param>
         /// <returns>Bool type</returns>
         public bool Equals(Card other)
         {
             return ((this.Rank == other.Rank) && (this.Suit == other.Suit));
-        }
-
-        /// <summary>
-        /// Compares the rank and suit of 2 cards.
-        /// </summary>
-        /// <param name="other">Card Class</param>
-        /// <returns>An integer to compare.</returns>
-        public int CompareTo(Card other)
-        {
-            if (this.Suit == other.Suit)
-            {
-                return this.Rank.CompareTo(other.Rank);
-            }
-            return this.Suit.CompareTo(other.Suit);
         }
 
         /// <summary>

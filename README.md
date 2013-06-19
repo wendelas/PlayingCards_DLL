@@ -20,14 +20,3 @@ Installation
 
 You can make a instance of class Deck and use it or 
 you can make our own class and inheritance Deck.
-
-Example: 
-
-  public class PokerDeck : Deck
-  {
-    ...
-    public PokerDeck(): base()
-    {
-      ...
-    }
-  }

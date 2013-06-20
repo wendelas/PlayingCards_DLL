@@ -7,10 +7,11 @@ Designed while I was practising inheritance of classes in .NET Framework.
 Latest Version
 ================
 Version 1.0.0.7 features:
+
 Sorting cards by rank and suit. 
 
-1. .Sort(new SuitSort());
-1. .Sort(new RankSort());
+.Sort(new SuitSort());
+.Sort(new RankSort());
 
 Installation
 ================

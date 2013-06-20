@@ -11,6 +11,7 @@ Version 1.0.0.7 features:
 Sorting cards by rank and suit. 
 
 .Sort(new SuitSort());
+
 .Sort(new RankSort());
 
 Installation

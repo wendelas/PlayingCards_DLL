@@ -27,11 +27,15 @@ namespace PlayingCards
         /// <param name="suit">Value for the Suit property</param>
         public Card(int rank, int suit)
         {
-            if ((rank < GlobalVars.LowestCard) || (rank > GlobalVars.HighestCard)) throw new Exception("Rank value was incorect");
-            else this.Rank = rank;
+            if ((rank < GlobalVars.LowestCard) || (rank > GlobalVars.HighestCard)) 
+                throw new Exception("Rank value was incorect");
+            else 
+                this.Rank = rank;
 
-            if ((suit <= -1) || (suit >= 4)) throw new Exception("Suit value was incorect");
-            else this.Suit = suit;
+            if ((suit <= -1) || (suit >= 4)) 
+                throw new Exception("Suit value was incorect");
+            else 
+                this.Suit = suit;
         }
 
         /// <summary>

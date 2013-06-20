@@ -42,10 +42,13 @@ namespace PlayingCards
             this.deck = new List<Card>();
             this.random = new Random();
 
-            if ((highestCard - lowestCard) <= 0) throw new Exception("Incorect values for lowest or highest card.");
+            if ((highestCard - lowestCard) <= 0) 
+                throw new Exception("Incorect values for lowest or highest card.");
 
-            if (lowestCard == 1) GlobalVars.AceRank = 1;
-            else GlobalVars.AceRank = 14;
+            if (lowestCard == 1) 
+                GlobalVars.AceRank = 1;
+            else 
+                GlobalVars.AceRank = 14;
 
             GlobalVars.LowestCard = lowestCard;
             GlobalVars.HighestCard = highestCard;
@@ -59,7 +62,8 @@ namespace PlayingCards
         /// <returns>Class Card</returns>
         public Card DealCard()
         {
-            if (this.CardsLeft == 0) throw new Exception("There aren't any cards left in the deck");
+            if (this.CardsLeft == 0) 
+                throw new Exception("There aren't any cards left in the deck");
 
             int index = this.random.Next(this.CardsLeft);
             Card card = this.deck[index];

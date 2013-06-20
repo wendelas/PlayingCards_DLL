@@ -8,6 +8,7 @@ Latest Version
 ================
 Version 1.0.0.7 features:
 Sorting cards by rank and suit. 
+
 1. .Sort(new SuitSort());
 1. .Sort(new RankSort());
 

@@ -2,7 +2,10 @@ What is it?
 ================
 This is a library that helps you build a card games.
 It can be run on Windows, Silverlight, Windows Phone and Xbox 360.
-Designed while I was practising inheritance of classes in .NET Framework.
+
+License
+================
+Read License.txt
 
 Latest Version
 ================

@@ -28,12 +28,12 @@ namespace PlayingCards
         public Card(int rank, int suit)
         {
             if ((rank < GlobalVars.LowestCard) || (rank > GlobalVars.HighestCard)) 
-                throw new Exception("Rank value was incorect");
+                throw new ArgumentException("Rank value could be between the lowest and the highest card in the deck.", "rank");
             else 
                 this.Rank = rank;
 
-            if ((suit <= -1) || (suit >= 4)) 
-                throw new Exception("Suit value was incorect");
+            if ((suit < 0) || (suit > 4)) 
+                throw new ArgumentException("Suit value could be between 0 and 4.", "suit");
             else 
                 this.Suit = suit;
         }

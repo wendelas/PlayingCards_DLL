@@ -42,8 +42,12 @@ namespace PlayingCards
             this.deck = new List<Card>();
             this.random = new Random();
 
-            if ((highestCard - lowestCard) <= 0) 
-                throw new Exception("Incorect values for lowest or highest card.");
+            if (highestCard > 14)
+                throw new ArgumentException("The highest must be less than or equal 14", "highestCard");
+            if (lowestCard < 1)
+                throw new ArgumentException("The lowest rank must be more than or equal 1", "lowestCard");
+            if ((highestCard - lowestCard) <= 0 || (highestCard - lowestCard) > 12)
+                throw new Exception("The diference can't be less then 1 or more than 12");
 
             if (lowestCard == 1) 
                 GlobalVars.AceRank = 1;
